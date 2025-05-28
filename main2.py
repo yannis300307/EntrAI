@@ -29,12 +29,10 @@ class EntrAI:
     def generate_thread(self):
         print("Starting generating")
         for token in self.model.generate(model='mistral', prompt=self.prompt, stream=True, system=pre_prompt):
-            print(token["response"])
+            print(token["response"], end="")
             if not self.writing: break
             self.text_buffer.extend(token["response"])
-    
-        print(self.text_buffer)
-        
+
     
     def handle_user_type(self, key):
         if key.event_type == "down": self.user_type_buffer += key.name
@@ -73,10 +71,10 @@ class EntrAI:
             return False
         
         # Only handle key if this is a key down event
-        if key.event_type != "down":
+        if key.event_type == "down":
             next_char = self.text_buffer.pop(0)
         else:
-            next_char = ""
+            return True
         
         # Only accept key that is the one we want
         if key.name == next_char:
@@ -84,7 +82,6 @@ class EntrAI:
         
         # Write the letter to the keyboard
         keyboard.write(next_char)
-        print(next_char, key.name)
         return False
     
     def start(self):
