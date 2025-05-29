@@ -1,0 +1,5 @@
+ollama
+pillow
+pyperclip
+keyboard
+pytesseract
