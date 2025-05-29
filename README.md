@@ -8,11 +8,13 @@ Run the Python script and let it running in the background. Open your favorite t
 
 Instead of copying the text to your clipboard, you can also take a screenshot of the prompt (Maj + Win + S on Windows). EntrAI will read the text automatically using Tesseract.
 
-The project is configured to reply in French but you can easily change the langage in the code. You can also use another AI model available on Ollama.
+To stop the generation and disable keyboard intercept, type `!s`. To quit EntrAI, type `!q`. The program will intercept all your keyboard inputs until you type `!s` or `!q`.
+
+The project is configured to reply in French but you can easily change the langage in the code. You can also use another AI model available on Ollama. The default model is `llama3.2:latest`.
 
 ## Disclaimer
 
-This project is **ONLY** made for testing purpose and is **ABSOLUTLY** not made for cheating at an exam.
+This project is **ONLY** made for testing purpose and is **ABSOLUTLY NOT** made for cheating at an exam.
 **PLEASE DO NOT USE IT TO CHEAT!!**
 
 I will not be responsible for any problem you could get with the program.
@@ -26,10 +28,14 @@ Note that EntrAI may be flagged as a virus by some antivirus because it could be
 
 ## Install
 
-Install Python 3.11 or newer.
-Install Tesseract from https://github.com/UB-Mannheim/tesseract/wiki and add it to your path.
-Install ollama from https://ollama.com/.
-Install Python Dependencies by running `pip install -r requirements.txt` in the current directory.
+1. Install Python 3.11 or newer.
+2. Install Tesseract from https://github.com/UB-Mannheim/tesseract/wiki and add it to your path.
+3. Install ollama from https://ollama.com/.
+4. Install Python dependencies by running `pip install -r requirements.txt` in the current directory.
 
 
-I will not provide an installer as this project is only for testing and is not intended to be use by students.
+I will not provide an installer as this project is only for testing and is not intended to be use by students trying to cheat.
+
+## How does it work?
+
+EntrAI uses the Keyboard Python library to intercept keyboard events. When the user types `!cr`, it will read the clipboard content, give it to the IA and store the answer. It is now in writing mode. EntrAI will intercept all keyboard events and write the answer's current letter instead of the random letter.
