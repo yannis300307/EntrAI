@@ -17,12 +17,11 @@ The project is configured to reply in French but you can easily change the langa
 This project is **ONLY** made for testing purpose and is **ABSOLUTLY NOT** made for cheating at an exam.
 **PLEASE DO NOT USE IT TO CHEAT!!**
 
-I will not be responsible for any problem you could get with the program.
-Cheating is forbidden by the law and you could be ban forever from all exams.
+I will not be held responsible for any problem you could get into by using this program. Cheating is most often forbidden and you could be prohibited from passing exams.
 
 ## Platform support
 
-EntrAI should work on Windows. I haven't tested it yet on Linux and MacOS.
+EntrAI should work on Windows. I haven't tested it on Linux and MacOS yet.
 
 Note that EntrAI may be flagged as a virus by some antivirus because it could be concidered as a keylogger.
 
